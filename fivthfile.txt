@@ -1,0 +1,46 @@
+package com.te.polymorphism;
+
+public class Test {
+int x =10;
+public void m1() {
+	System.out.println("from test");
+}
+}
+
+
+package com.te.polymorphism;
+
+public class Demo extends Test {
+	int x =20;
+	@Override
+	public void m1() {
+		System.out.println("from demo");
+	}
+
+}
+
+
+package com.te.polymorphism;
+
+public class Main {
+	public static void main(String[] args) {
+		
+	
+
+
+	Test test = new Test();
+	test.m1();
+	System.out.println(test.x);
+	
+	Demo demo = new Demo();
+	demo.m1();
+	System.out.println(demo.x);
+	
+	Test t = new Demo();
+	t.m1();
+	System.out.println(t.x);
+	
+	
+
+}
+}

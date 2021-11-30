@@ -1,0 +1,45 @@
+
+public class Mian {
+
+	public static void main(String[] args) {
+		//Test1 t1 = new Test1();
+		//t1.m1();  method overriding
+		//t1.m2();// non static using object ceation
+	//	Test1.m2();// static way of calling by giving classname.methodname
+
+		//upcasting - changing he child class object to parent
+		Test t = new Test1();
+		t.m1();
+		// downcasting- parent to child class object
+         Test1 t1=(Test1) t;
+         t1.m2();
+	}
+
+}
+
+
+package com.te.methodoverriding;
+
+public class Test {
+	public void m1() {
+		System.out.println("from m1");
+	}
+
+}
+
+
+
+public class Test1 extends Test {
+	
+	
+	
+	public void m1() {
+		super.m1();
+		System.out.println("from m2");
+	}
+	public static void m2() {
+		System.out.println("static from test1");
+	}
+
+
+}

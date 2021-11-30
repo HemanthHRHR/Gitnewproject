@@ -1,0 +1,22 @@
+package com.te.hasharelation;
+
+public class Processor {
+	String brand;
+	
+	double speed;
+	int core;
+	public Processor(String brand, double speed, double d) {
+		super();
+		this.brand = brand;
+		this.speed = speed;
+		this.core = (int) d;
+	}
+	@Override
+	public String toString() {
+		return "Processor [brand=" + brand + ", speed=" + speed + ", core=" + core + "]";
+	}
+	
+	
+
+}
+
